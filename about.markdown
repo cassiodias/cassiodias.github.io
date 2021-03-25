@@ -6,7 +6,7 @@ permalink: /about/
 Hello, I’m Cassio (yes, like the watch)!
 
 <p align="center">
-    <img class="border-radius:50%; width: 50px; height: 50px;" src="{{site.baseurl}}/assets/cassio-green.jpg">
+    <img style="width: 110px; height: 110px;" src="{{site.baseurl}}/assets/cassio-green.jpg">
 </p>
 
 I’m a software engineer living in Dublin, Ireland. I am an enthusiast of software engineering, philosophy and classical guitar.
