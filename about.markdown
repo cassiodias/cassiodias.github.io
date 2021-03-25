@@ -7,6 +7,8 @@ Hello, I’m Cassio (yes, like the watch)!
 
 <p align="center">
     ![image](/assets/cassio-green.jpg)
+</br>
+    <img src="{{site.baseurl}}/assets/cassio-green.jpg">
 </p>
 
 I’m a software engineer living in Dublin, Ireland. I am an enthusiast of software engineering, philosophy and classical guitar.
