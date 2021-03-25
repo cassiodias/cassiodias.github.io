@@ -3,10 +3,20 @@ layout: page
 title: About
 permalink: /about/
 ---
+Hello, I’m Cassio (yes, like the watch)!
 
-Hello, I’m Cassio!
+<p align="center">
+    <img class="border-radius: 50%; width: 100px; height: 100px;" src="./assets/cassio-green.jpg" />
+</p>
 
-I’m a software engineer living in Dublin, Ireland. I am a fan of technology, coding, and photography. I’m also interested in guitar and music.
+I’m a software engineer living in Dublin, Ireland. I am an enthusiast of software engineering, philosophy and classical guitar.
 
-[Linkedin](https://www.linkedin.com/in/cassiodias/)
+**Contacts**
 
+* [Linkedin](https://www.linkedin.com/in/cassiodias/)
+
+* cassio.dias.25@gmail.com
+
+* [twitter](https://www.twitter.com/cassiodias25/) (don't use it quite often)
+
+* [github](https://github.com/cassiodias)
