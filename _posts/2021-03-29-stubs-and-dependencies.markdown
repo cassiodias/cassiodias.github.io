@@ -7,7 +7,7 @@ categories: coding, test, stub
 # STUBS AND DEPENDENCIES
 
 <p align="center">
-    <img style="width: 250px; height: 250px;" src="https://thestubswarsaw.bandcamp.com/album/social-death-by-rock-n-roll">
+    <img style="width: 250px; height: 250px;" src="https://f4.bcbits.com/img/a2792880258_10.jpg">
 </p>
 
 The stubs, band from Poland.
