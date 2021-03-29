@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "STUBS AND DEPENDENCIES"
+date:   2021-03-28 15:59
+categories: coding, test, stub
+---
 # STUBS AND DEPENDENCIES
 
 <p align="center">
