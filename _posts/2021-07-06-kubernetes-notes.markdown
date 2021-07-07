@@ -112,7 +112,7 @@ Given `k create deployment rollnginx --image=ngninx:1.8`
 
 ## Exposing apps
 
-### K networking
+### Kubernetes Networking
 
 
 Starting with the Nodes, we have different Pods, and every Pod has its own IP address. The Pod by itself is distributed by the **deployment**, which is a Kubernetes API object. The Pod has its internal IP address and it can be found using command like `Docker PS` (also can be found in the deployment). 
@@ -123,7 +123,7 @@ The `Service object` is another API object in Kubernetes that is connected to th
 
 But how does the end user can get access? That is the `Ingress` job! As the name suggests, it ingress the http/s traffic only providing URL access to a Service object. Another interesting part about Ingress is that it can also be connected to multiple Service objects. That's not very common, but it's possible (some reason if you have a very big deployment, you want to create multiple service objects, you can put one ingress on top of it, and the ingress is providing a URL will load balance the traffic to the different services).
 
->> User -> access via ip address/target port / endpoints -> Service -> kKnows Pods by Labels -> | Acting as Load balancer | -> Pod (kube-proxy exposes Pod IP)
+>> User -> access via ip address/target port / endpoints -> Service -> Knows Pods by Labels, acting as Load balancer -> Pod (kube-proxy exposes Pod IP)
     
 ## Sources
 
