@@ -114,7 +114,6 @@ Given `k create deployment rollnginx --image=ngninx:1.8`
 
 ### Kubernetes Networking
 
-
 Starting with the Nodes, we have different Pods, and every Pod has its own IP address. The Pod by itself is distributed by the **deployment**, which is a Kubernetes API object. The Pod has its internal IP address and it can be found using command like `Docker PS` (also can be found in the deployment). 
 
 However, we can't send data from end users directly to these Docker IP addresses - every new Pod added has new IP address, which makes almost impossible to manage and forward request to them. That is why Kubernetes has `Service object` (see above Components > Service). 
@@ -124,6 +123,34 @@ The `Service object` is another API object in Kubernetes that is connected to th
 But how does the end user can get access? That is the `Ingress` job! As the name suggests, it ingress the http/s traffic only providing URL access to a Service object. Another interesting part about Ingress is that it can also be connected to multiple Service objects. That's not very common, but it's possible (some reason if you have a very big deployment, you want to create multiple service objects, you can put one ingress on top of it, and the ingress is providing a URL will load balance the traffic to the different services).
 
 > User -> access via ip address/target port / endpoints -> Service -> Knows Pods by Labels, acting as Load balancer -> Pod (kube-proxy exposes Pod IP)
+
+
+### How to expose
+
+Imagining we have 2 Nodes, and on the worker nodes we have pods. Pod1 has 172.17.0.10 and Pod 2 on 172.17.0.11.
+
+Then Pod 3 is on another worker node as 172.17.0.12. Now somewhere in kubernetes you create the service object and the service object is connecting to the deployments using labels. 
+
+The service object needs to connect to the pods (physically connect to the pods,) the service object does have a couple of properties. 
+
+* Its own IP address, which is how the service object is going to be reachable
+* The targetPort which is the port at which the service object is going to address the pods
+* Endpoints which are the IP addresses of the Pods themselves. But then the service object comes to the physical nodes, and what's going to happen there? On the physical nodes there is kube-proxy. And kube-proxy communicates to iptables and creates forwarding rules to communicate to the endpoint IP addresses. 
+
+`kube-proxy` is a component that will run on all of the physical nodes to communicate to iptables and make sure that the endpoint IP addresses can be reached, and the service object addresses all of these and makes it kind of virtual load balancer. And as such the service object will make sure that traffic is being directed to one of the boxes. 
+
+When working with services, we should know that there are different services types. And these types make it possible to work with services according to the needs of different environments. 
+
+* **ClusterIP** is the default type, and in ClusterIP the service will get an IP address that is in the ClusterIP address range. That's useful, but the ClusterIP address range is typically is internally accessible only. A load balancer in front of it might be needed if we want to access the services that is using ClusterIP. 
+
+* **NodePort** allocates specific node ports, which needs to be open on a firewall. It means that on all the worker nodes in the cluster will be exposed and that is providing access to your service (Need to configure some port forwarding we you want to expose NodePort services to your external users). 
+
+* **LoadBalancer** is a service type that's currently only implemented in public cloud. And that's very convenient because a LoadBalancer will give an external IP address. An IP address that is reachable by external users directly, and LoadBalancer service type will load balance the workload between the different pods that are involved. 
+
+So ClusterIP and NodePort are also load balancing between the different pods that are involved. But the difference in the LoadBalancer we get a public IP address automatically. 
+
+* **ExternalName** is the object that works on DNS names and the redirection is happening at a DNS level. At last, there's the service without the selector. We can use that for direct connection which are based on IP and port without an endpoint. And that's useful for connections to databases or between namespaces. It's a less common service type.
+
     
 ## Sources
 
