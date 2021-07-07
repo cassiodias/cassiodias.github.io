@@ -155,3 +155,8 @@ So ClusterIP and NodePort are also load balancing between the different pods tha
 ## Sources
 
 * https://kubernetes.io/docs/concepts/
+* [K8S handbook](https://www.freecodecamp.org/news/the-kubernetes-handbook/)
+* https://www.redhat.com/en/topics/containers/kubernetes-architecture
+* [Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
+* [KubeCon + CloudNativeCon North America 2019](https://www.youtube.com/playlist?list=PLj6h78yzYM2NDs-iu8WU5fMxINxHXlien)
+* [K8S Operators](https://www.redhat.com/rhdc/managed-files/cl-oreilly-kubernetes-operators-ebook-f21452-202001-en_2.pdf)
