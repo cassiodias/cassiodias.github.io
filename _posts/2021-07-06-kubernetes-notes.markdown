@@ -5,6 +5,8 @@ date:   2021-07-06 19:03
 categories: generic
 ---
 
+{:toc}
+
 # Kubernetes notes, the basics
 
 ## What? 
@@ -91,6 +93,22 @@ With the raise of micro-services and containers, how to manage them? Scripts?
         * etcd (the cluster brain) is a k/v store pods states provide information to controller manager
     * multiple instances of master with distributed etcd
     * Need less CPU, RAM and storage as oppose as worker nodes
+
+## Managing updates and rollbacks
+
+Given `k create deployment rollnginx --image=ngninx:1.8`
+
+* `k rollout history deployment`
+* `k edit deployment.apps rollenginx` and change version to 1.15
+* `k rollout history deployment` now it shows 2 revisions
+* `k rollout history deployment rollnginx -revision=1`
+* `k rollout history deployment rollnginx -to-revision=1`
+
+## Creating yaml file from dry-run
+
+`k create deployment whatever-name --image={image_name} --dry-run=client --output=yaml > {file_name}.yaml && vi {file_name}.yaml` 
+
+
     
 ## Sources
 
