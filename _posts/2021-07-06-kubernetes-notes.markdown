@@ -5,6 +5,7 @@ date:   2021-07-06 19:03
 categories: generic
 ---
 
+* Do not remove this line (it will not be displayed)
 {:toc}
 
 # Kubernetes notes, the basics
