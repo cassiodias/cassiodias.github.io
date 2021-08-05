@@ -11,6 +11,7 @@ github_username:  cassiodias
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 port: 4445    
 # Exclude from processing.
