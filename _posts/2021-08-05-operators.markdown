@@ -60,7 +60,7 @@ The actions an Operator performs can include almost anything: scaling a complex 
 upgrades, or even managing kernel modules for nodes in a computational cluster
 with specialized hardware.
 
-
-![Kubernetes: Resources + Controllers](https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-)
+<img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-"
+     style="float: left; margin-right: 10px;" />
 
 _[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_
