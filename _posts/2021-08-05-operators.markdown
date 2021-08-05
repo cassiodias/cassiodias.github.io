@@ -65,6 +65,24 @@ with specialized hardware.
 
 ## How Operators Work 2
 
+Operator is composed of the following components: a Custom Resource (The API extended from k8s); A Resource Controller (who does the work). A CRD allows you to extend the Kubernetes API. A CRD needs a Controller to act upon its presence (i.e., CRD instance). Without a controller for your custom resource, then it’s just a stateless object within Kubernetes.
+
 <img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image2_46.png?itok=RpGomNQ6"
      style="float: left; margin-right: 10px;" /></br><center>_[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_</center>
+
+### How does a controller work? What does it do? What’s inside of a controller?
+
+> The Reconcile
+
+The Resource Controller helps ensure that the current state of a resource matches the desired state of a resource (the Spec). An example of this is if it was specified the number of pods of a resource through an arbitrary specification/attribute, size, on the custom resource instance. If we increase/decrease the value, then we are setting the desired state.
+
+The following cycle takes place when a resource change event occurs:
+
+**Observe/watch:** In this phase, the controller observes the state of the cluster. Typically this is initiated by observing the events on the custom resource instance. These events are usually subscribed from the custom resource controller. Consider this to be similar to a pub/sub mechanism between the resource controller and cluster.
+
+**Analyze:** In this phase, the resource controller compares the current state of the resource instance to the desired state. The desired state is typically reflective of what is specified in the spec attributes of the resource.
+
+**Act/Reconcile:** In this phase, the resource controller performs all necessary actions to make the current resource state match the desired state. This is called reconciliation, and is typically where operational knowledge is implemented (i.e., business/domain logic).
+
+The reconciliation cycle generally runs until the desired state is achieved or until an error is thrown. It is not uncommon to see the reconciliation cycle run repeatedly as it treats each run as an idempotent process.
 
