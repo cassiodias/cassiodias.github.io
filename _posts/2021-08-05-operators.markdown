@@ -61,6 +61,6 @@ upgrades, or even managing kernel modules for nodes in a computational cluster
 with specialized hardware.
 
 
-[Kubernetes: Resources + Controllers](https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-)
+![Kubernetes: Resources + Controllers](https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-)
 
 _[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_
