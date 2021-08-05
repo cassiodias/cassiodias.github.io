@@ -61,6 +61,10 @@ upgrades, or even managing kernel modules for nodes in a computational cluster
 with specialized hardware.
 
 <img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;" /></br><center>_[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_</center>
 
-_[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_
+## How Operators Work 2
+
+<img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image2_46.png?itok=RpGomNQ6"
+     style="float: left; margin-right: 10px;" /></br><center>_[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_</center>
+
