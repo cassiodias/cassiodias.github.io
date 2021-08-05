@@ -61,7 +61,8 @@ upgrades, or even managing kernel modules for nodes in a computational cluster
 with specialized hardware.
 
 <img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image3_35_0.png?itok=zAn9Qoa-"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;"/>
+
 _[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_
 
 ## How Operators Work 2
@@ -69,7 +70,8 @@ _[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introducti
 Operator is composed of the following components: a Custom Resource (The API extended from k8s); A Resource Controller (who does the work). A CRD allows you to extend the Kubernetes API. A CRD needs a Controller to act upon its presence (i.e., CRD instance). Without a controller for your custom resource, then it’s just a stateless object within Kubernetes.
 
 <img src="https://www.redhat.com/cms/managed-files/styles/wysiwyg_full_width/s3/image2_46.png?itok=RpGomNQ6"
-     style="float: left; margin-right: 10px;" />
+     style="float: left; margin-right: 10px;"/>
+
 _[source: Red Hat](https://www.redhat.com/en/blog/operators-over-easy-introduction-kubernetes-operators)_
 
 ### How does a controller work? What does it do? What’s inside of a controller?
