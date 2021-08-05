@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kubernetes Operators"
-date:   2021-07-12 20:41
+date:   2021-08-05 18:30
 categories: generic
 ---
 
