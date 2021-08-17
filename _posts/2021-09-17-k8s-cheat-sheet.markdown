@@ -172,7 +172,7 @@ kubectl get all --all-namespaces
 
 # CHANGING RESOURCE ATTRIBUTES
 
-## taint
+## Taint
 
 ```
 kubectl taint [node_name] [taint_name]
@@ -308,3 +308,7 @@ kubectl config
 kubectl cluster-info
 kubectl get componentstatuses
 ```
+
+# Bonus
+
+[The pod of minerva from Linux Academy](https://lucid.app/lucidchart/b1b62a6e-1266-41dd-b48d-3c44252fb88f/view?page=vf_Fs9CbV-a6#)
