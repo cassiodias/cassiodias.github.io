@@ -226,7 +226,7 @@ kubectl edit svc [svc_name]
 kubectl delete svc [svc_name]
 ```
 
-# Daemonsets
+## Daemonsets
 
 ```
 kubectl edit ds [ds_name] -n kube-system
