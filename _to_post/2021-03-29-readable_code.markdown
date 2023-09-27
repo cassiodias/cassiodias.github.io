@@ -4,31 +4,41 @@ title:  "Principles of readable code"
 date:   2021-03-29 15:45
 categories: coding, test, stub
 ---
-# Principles of readable code
+# The Art of Writing Readable Code
 
 <p align="center">
     <img style="width: 380px; height: 200px;" src="https://www.wyliecomm.com/wp-content/uploads/2019/11/readable.png">
 </p>
 
-* **Single responsibility** All building blocks - classes, methods, variables - follow the single responsibility principle: every building block does exactly one thing. This makes it easy for the person reading the code to understand what this responsibility is. It also makes it clear what part of the code needs to change.
-  
+Writing code is one thing, but writing code that's easy for others to understand and maintain is a whole different ball game. In this post, we'll explore the fundamental principles of writing readable code—code that's not just functional but also a joy to work with.
 
-* **Well-structured**. The codebase is easy to navigate around, as functions, classes, modules follow a logical structure. Formatting is consistent across classes and the codebase.
-  
+## Single Responsibility: Keep It Simple
 
-* **Thoughtful naming**. Class, function, and variable names all help understand what is happening, and making reading more seamless. Code that has good names often had developers spend multiple iterations coming to these clear names.
-  
+One of the cornerstones of readable code is the single responsibility principle. Every building block, whether it's a class, method, or variable, should do one thing and one thing only. This clarity makes it easy for anyone reading the code to grasp its purpose and understand what part of the code might need to change in the future.
 
-* **Simple and concise**. The code tries to be as humble and simple as possible. Developers don't use fancy tricks and also avoid over-complicating things. Functions are mostly short, making them easy to read. Classes are also not overly large.
-  
+## Well-Structured: A Logical Layout
 
-* **Comments explain the "why," not the "how."** Most of the code can be understood by itself. Comments fill in the remaining gaps.
-  
+A well-structured codebase is like a well-organized bookshelf. Functions, classes, and modules should follow a logical structure that's easy to navigate. Consistency in formatting across classes and the codebase as a whole helps maintain clarity.
 
-* **Continuously refactored to keep being readable**. Code-base grow. As a simple class gets more responsibility, it grows in size and complexity. Readable codebases stay readable due to continuous refactoring. The new, complex class might be broken into multiple parts or changed other ways to stay easy to read.
-  
+## Thoughtful Naming: Words Matter
 
-* **Well-tested** Well-tested code can be modified quickly and without fear of breaking things. Having the code tested via automated tests is important for the code to stay readable. Without tests, refactoring the code becomes risky, and developers eventually stop doing it. With tests, there is no excuse on why not to make even large and risky refactors, that keep the code easy to read.
+Good naming is an art. Class, function, and variable names should be chosen with care, helping to convey what's happening within the code. Clear names often result from multiple iterations, as developers refine their understanding of the code's purpose.
 
+## Simple and Concise: Less Is More
 
+Readable code embraces simplicity. Developers avoid fancy tricks and the temptation to overcomplicate things. Functions tend to be concise, making them easy to read, and classes are kept from becoming overly large and complex.
+
+## Comments: Explaining the Why
+
+While the code itself should be self-explanatory, comments play a vital role in explaining the "why" behind the code. They fill in the gaps and provide context where necessary, enhancing the code's comprehensibility.
+
+## Continuous Refactoring: Code Evolution
+
+As codebases grow, maintaining readability can be a challenge. Readable codebases are like well-tended gardens; they stay that way through continuous refactoring. As responsibilities grow, code may be restructured or broken into smaller parts to keep it easy to read.
+
+## Well-Tested: The Backbone of Readability
+
+Well-tested code is the backbone of readable code. Automated tests ensure that code can be modified quickly and without fear of breaking things. Testing is essential for code to stay readable, as it allows developers to make large, risky refactors confidently.
+
+In conclusion, writing readable code is an art and a discipline. It's about clarity, simplicity, and empathy for the developers who will come after you. By adhering to these principles—embracing single responsibility, structure, thoughtful naming, simplicity, meaningful comments, continuous refactoring, and robust testing—you can elevate your code from merely functional to truly readable. And in the world of software development, that's a distinction that can make all the difference. Happy coding!
 
