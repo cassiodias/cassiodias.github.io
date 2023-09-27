@@ -10,6 +10,8 @@ categories: generic
 
 Hey there, fellow software enthusiasts! Today, let's dive into a topic that's often overlooked but essential for a thriving development team: courage. In agile practices, courage isn't just a buzzword; it's a mindset that can help us create a fearless environment where team members can fail fast and adjust, ultimately leading to better results.
 
+<p><img src="https://qph.cf2.quoracdn.net/main-qimg-02e6645b2956223ee5d65266365c4933-lq"/></p>
+
 ## The Power of Courage in Software Development
 
 Courage in software development isn't about jumping out of aeroplanes or facing down wild animals (unless your code is genuinely ferocious!). Instead, it's about having the fortitude to evaluate your work and be open to change objectively. Let's break down how this courage can make a significant difference in your team's performance.
