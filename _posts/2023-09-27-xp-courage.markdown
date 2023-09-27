@@ -28,7 +28,7 @@ Failure is not something to be feared but embraced. Courageous teams understand 
 
 ## Creating a Fearless Environment
 
-Now that we've explored the importance of courage in software development, let's touch on how to foster an environment that encourages team members to embrace these principles.
+Now that we've explored the importance of courage in software development let's touch on fostering an environment that encourages team members to embrace these principles.
 
 ### Open Communication
 
