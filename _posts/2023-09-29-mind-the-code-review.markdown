@@ -6,7 +6,7 @@ categories: best practices
 ---
 
 * Do not remove this line (it will not be displayed)
-  {:toc}
+{:toc}
 
 # "Mind the Code Review": A Guide to Effective Collaboration
 
