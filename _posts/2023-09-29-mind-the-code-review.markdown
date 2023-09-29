@@ -20,26 +20,32 @@ Let's explore the art of code review, focusing on how to turn it into a construc
 
 One of the key aspects of effective code review is asking questions. By posing inquiries, you invite the author to explain their reasoning instead of putting them on the defensive. Let's explore the power of questions by referencing Tanner Christensen's insightful comparison between criticism and code review:
 
-- **Criticism passes judgment — Code review poses questions.**
-- **Criticism is personal — Code review is objective.**
-- **Criticism is vague — Code review is concrete.**
-- **Criticism tears down — Code review builds up.**
-- **Criticism is adversarial — Code review is cooperative.**
-- **Criticism belittles the person — Code review improves the code and the team.**
+- 😒 Criticism passes judgment 
+  - 😉 Code review poses questions.
+- 😒 Criticism is personal     
+  - 😉 Code review is objective.
+- 😒 Criticism is vague
+  - 😉 Code review is concrete.
+- 😒 Criticism tears down
+  - 😉 Code review builds up.
+- 😒 Criticism is adversarial
+  - 😉 Code review is cooperative.
+- 😒 Criticism belittles the person
+  - 😉 Code review improves the code and the team.
 
 ## Effective Question Formats
 
 ### What/How Format
 
-- **What are some ways to make this code more readable?**
-- **How can the code be optimized to parse the data only once?**
-- **What happens when XYZ changes?**
+- What are some ways to make this code more readable?
+- How can the code be optimized to parse the data only once?
+- What happens when XYZ changes?
 
 ### I Like/I Wonder/I Wish Format
 
-- **I like how this is flexible and makes it easy to test.**
-- **I wonder what the advantage of looping through the array every time is.**
-- **I wish the JSON could be parsed only once since it’s expensive to read the file every time.**
+- I like how this is flexible and makes it easy to test.
+- I wonder what the advantage of looping through the array every time is.
+- I wish the JSON could be parsed only once since it’s expensive to read the file every time.
 
 Remember, the core principle is to ask exploratory questions rather than making it personal.
 
@@ -47,12 +53,12 @@ Remember, the core principle is to ask exploratory questions rather than making 
 
 Avoid using "you/your" and yes/no questions, as they can come across as confrontational or restrictive:
 
-- **Why did you do it this way? What is your reason for this?**
-- **I wonder what you were thinking about.**
-- **I wish you didn't have to parse this JSON multiple times.**
-- **Is there a better way to do this?**
-- **Did you intend this? Was this intentional?**
-- **Should this method be broken up?**
+- Why did you do it this way? What is your reason for this?
+- I wonder what you were thinking about.
+- I wish you didn't have to parse this JSON multiple times.
+- Is there a better way to do this?
+- Did you intend this? Was this intentional?
+- Should this method be broken up?
 
 To improve, consider the following options:
 
@@ -97,3 +103,5 @@ For those interested in diving deeper into the world of code reviews, here are s
 - **GitHub's Guide to Creating a Pull Request Template** - [Link](https://help.github.com/articles/creating-a-pull-request-template-for-your-repository/)
 
 Effective code review is not just about finding bugs; it's about nurturing a culture of collaboration and continuous improvement. By embracing the power of questions and following the principles outlined here, your code reviews can become a cornerstone of excellence in your software development journey.
+
+👨‍💻 Happy Coding!
