@@ -5,6 +5,9 @@ date:   2023-09-29 10:00
 categories: best practices
 ---
 
+* Do not remove this line (it will not be displayed)
+  {:toc}
+
 # "Mind the Code Review": A Guide to Effective Collaboration
 
 ![Code Review](https://davidwalsh.name/demo/code-review.png)
