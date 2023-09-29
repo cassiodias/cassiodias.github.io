@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mind the code review"
-date:   2023-09-29 12:47
+date:   2023-09-29 10:00
 categories: best practices
 ---
 
@@ -10,7 +10,6 @@ categories: best practices
 ![Code Review](https://davidwalsh.name/demo/code-review.png)
 
 Date: Sep 29, 2023
-Categories: best practices
 
 ## Introduction
 
