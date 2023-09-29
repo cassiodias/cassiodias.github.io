@@ -1,20 +1,21 @@
 ---
 layout: post
 title:  "Mind the code review"
-date:   2021-03-29 15:45
-categories: coding, test, stub
+date:   2023-09-29 12:47
+categories: best practices
 ---
 
 # "Mind the Code Review": A Guide to Effective Collaboration
 
 ![Code Review](https://davidwalsh.name/demo/code-review.png)
 
-Date: March 29, 2021  
-Categories: Coding, Testing, Stubbing
+Date: Sep 29, 2023
+Categories: best practices
 
 ## Introduction
 
-Code review is more than just checking lines of code. It's a practice that promotes knowledge sharing, enhances code quality, and fosters team collaboration. In this post, we'll delve into the art of code review, focusing on how to turn it into a constructive and collaborative process rather than a critical one.
+Code review is more than just checking lines of code. It's a practice that promotes knowledge sharing, enhances code quality, and fosters team collaboration. 
+Let's explore the art of code review, focusing on how to turn it into a constructive and collaborative process rather than a critical one.
 
 ## The Power of Questions
 
@@ -53,6 +54,20 @@ Avoid using "you/your" and yes/no questions, as they can come across as confront
 - **Is there a better way to do this?**
 - **Did you intend this? Was this intentional?**
 - **Should this method be broken up?**
+
+To improve, consider the following options:
+
+- **Provide Context and Explain the Why**: Instead of asking "Why did you do it this way?" or "What is your reason for this?", frame your feedback in a way that seeks to understand the reasoning behind the code. For example, you could say, "I'd like to understand the thought process behind this approach. Could you please explain your reasoning?"
+- **Use Neutral Language**: Avoid using judgmental or accusatory language such as "I wonder what you were thinking about." Instead, opt for a more neutral tone that focuses on the code and its functionality. For instance, "Let's discuss the rationale behind choosing this specific implementation."
+- **Suggest Improvements Positively**: Instead of saying, "I wish you didn't have to parse this JSON multiple times," you can rephrase it as, "Optimizing this code to parse the JSON only once could enhance its efficiency."
+- **Encourage Discussion and Alternatives**: Rather than asking, "Is there a better way to do this?" or "Should this method be broken up?", encourage a discussion by saying, "Let's explore potential alternatives for improving this section of code. Do you think breaking up this method might make it more maintainable?"
+- **Express Intent and Seek Clarification**: Instead of asking, "Did you intend this? Was this intentional?", express your understanding of the code's purpose and seek clarification if needed. For example, "I assume this code is meant to handle XYZ. Could you confirm if this was the intended behavior?"
+- **Offer Solutions and Explanations**: If you identify issues or suggest changes, provide clear explanations and, when possible, offer potential solutions. This helps the developer understand the problem and how to address it.
+- **Use "We" Instead of "You"**: Replace "you" with "we" to make it more collaborative. For instance, "Can we discuss the reasoning behind this approach?" implies a joint effort to understand and improve the code.
+- **Focus on Objectivity**: Keep your comments focused on objective code quality, maintainability, and performance rather than personal preferences or opinions.
+- **Acknowledge Positive Aspects**: Don't forget to acknowledge positive aspects of the code as well. If you see good practices or well-written sections, it's constructive to highlight them.
+
+Remember that the goal of a code review is to improve code quality and promote learning and collaboration. Using more neutral and collaborative language can lead to more productive discussions and better outcomes for the team.
 
 ## Responsibilities of Reviewers and Authors
 
