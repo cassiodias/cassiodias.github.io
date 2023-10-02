@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Abstractions"
+title:  "The Power and Peril of Software Abstraction: Benefits and Pitfalls"
 date:   2023-10-02 10:00
 categories: best practices
 ---
 
 * Do not remove this line (it will not be displayed)
 {:toc}
-
-# **The Power and Peril of Software Abstraction: Benefits and Pitfalls**
 
 ![abs](https://thevaluable.dev/images/2019/abstraction/too-abstract.jpg)
 
