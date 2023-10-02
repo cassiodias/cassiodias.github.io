@@ -1,110 +1,75 @@
 ---
 layout: post
-title:  "Mind the code review"
-date:   2023-09-29 10:00
+title:  "Abstractions"
+date:   2023-10-02 10:00
 categories: best practices
 ---
 
 * Do not remove this line (it will not be displayed)
 {:toc}
 
-# "Mind the Code Review": A Guide to Effective Collaboration
+# **The Power and Peril of Software Abstraction: Benefits and Pitfalls**
 
-![Code Review](https://davidwalsh.name/demo/code-review.png)
+![abs](https://thevaluable.dev/images/2019/abstraction/too-abstract.jpg)
 
-Date: Sep 29, 2023
+Date: Oct 2, 2023.
 
-## Introduction
+Abstraction is a concept that plays a pivotal role. It's a technique that allows developers to simplify complex systems, improve code re-usability, and enhance overall maintainability. However, like any powerful tool, software abstraction comes with both benefits and pitfalls. In this post, let's go into what software abstraction is, explore its advantages, and examine some common pitfalls to be aware of.
 
-Code review is more than just checking lines of code. It's a practice that promotes knowledge sharing, enhances code quality, and fosters team collaboration. 
-Let's explore the art of code review, focusing on how to turn it into a constructive and collaborative process rather than a critical one.
+## What is Software Abstraction?
 
-## The Power of Questions
+Software abstraction is the process of simplifying complex systems or concepts by breaking them down into more manageable and understandable parts. It involves hiding the underlying complexities while exposing only the essential features and functionality. Abstraction allows developers to work with high-level concepts and models, making it easier to design, implement, and maintain software systems.
 
-One of the key aspects of effective code review is asking questions. By posing inquiries, you invite the author to explain their reasoning instead of putting them on the defensive. Let's explore the power of questions by referencing Tanner Christensen's insightful comparison between criticism and code review:
+### Benefits of Software Abstraction
 
-- 😒 Criticism passes judgment 
-  - 😉 Code review poses questions.
-- 😒 Criticism is personal     
-  - 😉 Code review is objective.
-- 😒 Criticism is vague
-  - 😉 Code review is concrete.
-- 😒 Criticism tears down
-  - 😉 Code review builds up.
-- 😒 Criticism is adversarial
-  - 😉 Code review is cooperative.
-- 😒 Criticism belittles the person
-  - 😉 Code review improves the code and the team.
+1. **Complexity Reduction**: Abstraction enables developers to work with simplified models, which makes it easier to understand and reason about complex systems. This reduces the likelihood of introducing bugs and improves overall code quality.
 
-## Effective Question Formats
+2. **Code Re-usability**: By creating abstract, reusable components or libraries, developers can save time and effort in future projects. Abstraction promotes the "write once, use many times" principle.
 
-### What/How Format
+3. **Maintainability**: Abstracted code is typically easier to maintain because changes and updates can be made in a centralized manner, affecting all instances where the abstraction is used.
 
-- What are some ways to make this code more readable?
-- How can the code be optimized to parse the data only once?
-- What happens when XYZ changes?
+4. **Scalability**: Abstraction facilitates the scalability of software systems. As new features are added or requirements change, developers can work with high-level abstractions to adapt the system more efficiently.
 
-### I Like/I Wonder/I Wish Format
+5. **Interoperability**: Abstraction can help bridge the gap between different technologies or platforms by providing a common interface. This is especially valuable in situations where integration is essential.
 
-- I like how this is flexible and makes it easy to test.
-- I wonder what the advantage of looping through the array every time is.
-- I wish the JSON could be parsed only once since it’s expensive to read the file every time.
+### Pitfalls of Software Abstraction
 
-Remember, the core principle is to ask exploratory questions rather than making it personal.
+1. **Over-Abstraction**: One common pitfall is over-abstraction, where developers create excessively complex abstract layers that add unnecessary overhead and reduce code readability.
 
-## Steering Clear of "You/Your" and Yes/No Questions
+2. **Leaky Abstractions**: Sometimes, abstractions leak details of the underlying implementation, making it challenging to work with the abstracted code effectively.
 
-Avoid using "you/your" and yes/no questions, as they can come across as confrontational or restrictive:
+3. **Performance Overheads**: Abstraction layers can introduce performance overhead, especially in resource-constrained environments. Developers must strike a balance between abstraction and performance.
 
-- Why did you do it this way? What is your reason for this?
-- I wonder what you were thinking about.
-- I wish you didn't have to parse this JSON multiple times.
-- Is there a better way to do this?
-- Did you intend this? Was this intentional?
-- Should this method be broken up?
+4. **Maintenance Challenges**: While abstractions can enhance maintainability, they can also become a maintenance burden if not properly documented or if the original developers are no longer available.
 
-To improve, consider the following options:
+5. **Learning Curve**: Abstraction can introduce a learning curve for new team members who need to understand the abstracted components before they can work with them effectively.
 
-- **Provide Context and Explain the Why**: Instead of asking "Why did you do it this way?" or "What is your reason for this?", frame your feedback in a way that seeks to understand the reasoning behind the code. For example, you could say, "I'd like to understand the thought process behind this approach. Could you please explain your reasoning?"
-- **Use Neutral Language**: Avoid using judgmental or accusatory language such as "I wonder what you were thinking about." Instead, opt for a more neutral tone that focuses on the code and its functionality. For instance, "Let's discuss the rationale behind choosing this specific implementation."
-- **Suggest Improvements Positively**: Instead of saying, "I wish you didn't have to parse this JSON multiple times," you can rephrase it as, "Optimizing this code to parse the JSON only once could enhance its efficiency."
-- **Encourage Discussion and Alternatives**: Rather than asking, "Is there a better way to do this?" or "Should this method be broken up?", encourage a discussion by saying, "Let's explore potential alternatives for improving this section of code. Do you think breaking up this method might make it more maintainable?"
-- **Express Intent and Seek Clarification**: Instead of asking, "Did you intend this? Was this intentional?", express your understanding of the code's purpose and seek clarification if needed. For example, "I assume this code is meant to handle XYZ. Could you confirm if this was the intended behavior?"
-- **Offer Solutions and Explanations**: If you identify issues or suggest changes, provide clear explanations and, when possible, offer potential solutions. This helps the developer understand the problem and how to address it.
-- **Use "We" Instead of "You"**: Replace "you" with "we" to make it more collaborative. For instance, "Can we discuss the reasoning behind this approach?" implies a joint effort to understand and improve the code.
-- **Focus on Objectivity**: Keep your comments focused on objective code quality, maintainability, and performance rather than personal preferences or opinions.
-- **Acknowledge Positive Aspects**: Don't forget to acknowledge positive aspects of the code as well. If you see good practices or well-written sections, it's constructive to highlight them.
+## Hints for Effective Use of Software Abstraction
 
-Remember that the goal of a code review is to improve code quality and promote learning and collaboration. Using more neutral and collaborative language can lead to more productive discussions and better outcomes for the team.
+To make the most of software abstraction while avoiding its pitfalls, consider the following hints:
 
-## Responsibilities of Reviewers and Authors
+1. **Start Simple**: Begin with minimal abstractions and add complexity as needed. Avoid over-engineering from the start.
 
-### Reviewer’s Responsibilities
+2. **Document Thoroughly**: Document your abstractions comprehensively to help future developers understand their purpose and usage.
 
-- Ensure both the reviewer and the author understand how the implementation works or might not work.
-- Understand the reasoning behind the author’s implementation, regardless of personal agreement.
-- Guide the author to think about the why and how by asking questions instead of prescribing solutions.
-- Suggest reference materials when necessary, such as examples, documentation, or blogs.
-- It's perfectly fine to say “everything looks good” when it genuinely does.
+3. **Test Rigorously**: Ensure that your abstractions are thoroughly tested to identify and address potential issues.
 
-### Author’s Responsibilities
+4. **Review Code Regularly**: Conduct code reviews to ensure that abstractions are being used correctly and consistently.
 
-- Review your own code and inspect your own changes before submitting for review.
-- Explain why and how the implementation works at a high level, using simple outlines or diagrams if helpful.
-- Provide enough context to the reviewer, explaining where this code fits in the big picture and what components are involved directly before/after.
-- Point out specific areas of concern, if any, and explain your concerns and approach.
-- Don’t hesitate to ask questions if you don’t understand the reasoning behind the reviewer’s feedback.
-- It’s okay to respond with “I don’t know” or “I haven’t thought about it yet.” Take time to ponder the feedback and explore before making a decision.
-- Acknowledge the feedback, make a decision, and explain your choice. You don’t have to address everything at once. If you decide to address some feedback separately, clearly explain your decision and rationale.
+5. **Monitor Performance**: Keep an eye on performance metrics to detect and address any performance issues introduced by abstraction layers.
 
 ## Additional Resources
 
-For those interested in diving deeper into the world of code reviews, here are some valuable resources:
+If you'd like to delve deeper into the world of software abstraction, here are some additional resources to explore:
 
-- **"Peer Reviews in Software: A Practical Guide"** - [Link](https://www.amazon.com/exec/obidos/ASIN/0201734850/)
-- **"Humanizing Review"** - [Link](http://www.processimpact.com/articles/humanizing_reviews.pdf)
-- **GitHub's Guide to Creating a Pull Request Template** - [Link](https://help.github.com/articles/creating-a-pull-request-template-for-your-repository/)
+1. **Book: "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides** - This classic book explores design patterns, which often involve the use of abstraction to improve software architecture.
 
-Effective code review is not just about finding bugs; it's about nurturing a culture of collaboration and continuous improvement. By embracing the power of questions and following the principles outlined here, your code reviews can become a cornerstone of excellence in your software development journey.
+2. **Blog: "The Law of Leaky Abstractions" by Joel Spolsky** - This influential blog post discusses the concept of leaky abstractions and their impact on software development.
+
+3. **Article: "Abstraction and The Principle of Least Astonishment" by Jeff Atwood** - This article explores the principle of least astonishment and how it relates to abstraction in software.
+
+4. **Video: "Abstraction, Encapsulation, and Information Hiding" by Uncle Bob Martin** - In this video, Uncle Bob Martin discusses the concepts of abstraction, encapsulation, and information hiding in software design.
+
+In conclusion, software abstraction is a powerful tool that can significantly improve software development. However, it should be used judiciously, with a keen awareness of its potential pitfalls. By understanding when and how to apply abstraction effectively, developers can create more maintainable, scalable, and efficient software systems.
 
 👨‍💻 Happy Coding!
