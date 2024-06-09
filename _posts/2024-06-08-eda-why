@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "EDA Why not"
+date:   2024-06-08 11:00
+categories: code, architecture 
+---
+# EDA WHY NOT?!
+
+Event-driven architecture (EDA) is often praised for its ability to create highly decoupled and scalable systems. Its promise of flexibility and responsiveness makes it an attractive choice for modern applications. However, despite its advantages, many organizations find it challenging to adopt EDA, primarily because the same problems it aims to solve can often be addressed using more classical approaches involving queues and databases.
+
+One of the main reasons EDA is hard to adopt is the significant shift in thinking it requires. Traditional systems are usually built around a synchronous request-response model, where actions are performed in a predictable, sequential manner. In contrast, EDA relies on asynchronous communication and the idea that events propagate changes throughout the system without direct calls between services. This change in paradigm can be difficult for development teams to grasp and implement effectively. It requires not only new technical skills but also a deep understanding of event-driven patterns and the implications of designing systems that operate asynchronously.
+
+Moreover, the implementation of EDA introduces complexities that are often managed more straightforwardly with queues and databases. For instance, in a classical approach, a database transaction can be used to ensure data consistency and handle errors immediately. However, in an event-driven system, achieving consistency and reliability involves handling eventual consistency and implementing sophisticated error-handling and recovery mechanisms. Ensuring that events are processed exactly once, in the correct order, and without loss, adds layers of complexity that can be daunting to manage.
+
+The infrastructure needed for EDA can also pose challenges. Robust event brokers such as Kafka or RabbitMQ need to be deployed and maintained, ensuring their reliability and performance under load. These systems require careful configuration and monitoring to handle the event flow effectively. Additionally, debugging and monitoring an event-driven system can be more challenging compared to a synchronous system, where the flow of control is easier to trace and understand.
+
+From a scalability perspective, EDA shines, but it also introduces new issues. High-throughput systems might experience "event storms," where a surge in events can overwhelm the processing capabilities, causing performance bottlenecks. Ensuring low latency and high throughput in event processing requires careful architectural decisions and optimizations, which can be complex to implement and maintain.
+
+Data management in EDA presents its own set of challenges. As events evolve, maintaining backward compatibility while allowing for schema changes can be difficult. Furthermore, ensuring that event processing is idempotent (handling duplicate events gracefully) and preserving the correct order of events can be tricky and require additional logic and infrastructure.
+
+Culturally, adopting EDA can face resistance within organizations. Teams accustomed to traditional architectures may resist the shift due to perceived risks and the disruption associated with changing established practices. Effective adoption of EDA requires not only technical changes but also a shift in organizational culture and processes, fostering close collaboration and coordination across different teams to design and maintain a cohesive system.
+
+In summary, while EDA offers many cool advantages, its adoption is not straightforward. The same problems EDA aims to solve—scalability, decoupling, and responsiveness—can often be addressed using more familiar, classical approaches with queues and databases. These classical methods provide a more predictable and easier-to-implement path for many organizations, making the transition to EDA a challenging endeavor that requires overcoming significant technical, cultural, and organizational hurdles.
+
