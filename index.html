@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REKALL - Get Your Brain to Mars</title>
+  <meta name="description" content="REKALL - Semantic retrieval and memory for your LLM. Coming soon.">
+  <meta property="og:title" content="REKALL - Get Your Brain to Mars">
+  <meta property="og:description" content="Semantic retrieval and memory for your LLM.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cassiodias.github.io">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400&display=swap');
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Subtle radial glow behind the title */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200, 60, 50, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 1;
+      animation: fadeIn 2.5s ease-out;
+    }
+
+    .title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 80px rgba(200, 60, 50, 0.15);
+    }
+
+    .tagline {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
+      color: #888;
+      letter-spacing: 0.08em;
+      font-style: italic;
+      margin-bottom: 3rem;
+    }
+
+    .description {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: 300;
+      color: #999;
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 4rem;
+    }
+
+    .status {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      color: #555;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+    }
+
+    .status::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #c83c32;
+      border-radius: 50%;
+      margin-right: 10px;
+      vertical-align: middle;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #333, transparent);
+      margin: 2rem auto;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 2rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #333;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.4;
+        box-shadow: 0 0 4px rgba(200, 60, 50, 0.3);
+      }
+      50% {
+        opacity: 1;
+        box-shadow: 0 0 12px rgba(200, 60, 50, 0.6);
+      }
+    }
+
+    /* Noise texture overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Rekall</h1>
+    <p class="tagline">"Get your brain to Mars"</p>
+    <div class="divider"></div>
+    <p class="description">
+      Semantic retrieval and memory for your LLM.
+    </p>
+    <span class="status">Coming soon</span>
+  </div>
+  <div class="footer">cassiodias</div>
+</body>
+</html>
