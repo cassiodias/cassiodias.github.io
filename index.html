@@ -7,6 +7,7 @@
   <meta name="description" content="REKALL - Semantic retrieval and memory for your LLM. Coming soon.">
   <meta property="og:title" content="REKALL - Get Your Brain to Mars">
   <meta property="og:description" content="Semantic retrieval and memory for your LLM.">
+  <meta property="og:image" content="https://cassiodias.github.io/logo.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cassiodias.github.io">
   <style>
@@ -31,34 +32,44 @@
       position: relative;
     }
 
-    /* Subtle radial glow behind the title */
+    /* Subtle radial glow behind the logo */
     body::before {
       content: '';
       position: absolute;
-      top: 40%;
+      top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(200, 60, 50, 0.06) 0%, transparent 70%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(200, 60, 50, 0.08) 0%, transparent 65%);
       pointer-events: none;
     }
 
     .container {
       text-align: center;
       z-index: 1;
-      animation: fadeIn 2.5s ease-out;
+    }
+
+    .logo {
+      width: clamp(160px, 25vw, 240px);
+      height: auto;
+      margin-bottom: 2rem;
+      animation: logoAppear 3s ease-out forwards, logoBreathe 6s ease-in-out 3s infinite;
+      opacity: 0;
+      filter: drop-shadow(0 0 40px rgba(200, 60, 50, 0.0));
     }
 
     .title {
       font-family: 'Space Mono', monospace;
-      font-size: clamp(3rem, 8vw, 6rem);
+      font-size: clamp(2.5rem, 7vw, 5rem);
       font-weight: 700;
       letter-spacing: 0.3em;
       color: #ffffff;
       text-transform: uppercase;
       margin-bottom: 0.3em;
       text-shadow: 0 0 80px rgba(200, 60, 50, 0.15);
+      animation: fadeInUp 2s ease-out 1s forwards;
+      opacity: 0;
     }
 
     .tagline {
@@ -67,7 +78,9 @@
       color: #888;
       letter-spacing: 0.08em;
       font-style: italic;
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 2s ease-out 1.5s forwards;
+      opacity: 0;
     }
 
     .description {
@@ -78,7 +91,18 @@
       letter-spacing: 0.04em;
       line-height: 1.6;
       max-width: 480px;
-      margin: 0 auto 4rem;
+      margin: 0 auto 3.5rem;
+      animation: fadeInUp 2s ease-out 2s forwards;
+      opacity: 0;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #333, transparent);
+      margin: 0 auto 2.5rem;
+      animation: fadeInUp 2s ease-out 1.8s forwards;
+      opacity: 0;
     }
 
     .status {
@@ -89,6 +113,8 @@
       text-transform: uppercase;
       position: relative;
       display: inline-block;
+      animation: fadeInUp 2s ease-out 2.5s forwards;
+      opacity: 0;
     }
 
     .status::before {
@@ -103,13 +129,6 @@
       animation: pulse 2.5s ease-in-out infinite;
     }
 
-    .divider {
-      width: 60px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, #333, transparent);
-      margin: 2rem auto;
-    }
-
     .footer {
       position: absolute;
       bottom: 2rem;
@@ -117,9 +136,38 @@
       font-size: 0.7rem;
       color: #333;
       letter-spacing: 0.1em;
+      animation: fadeInUp 2s ease-out 3s forwards;
+      opacity: 0;
     }
 
-    @keyframes fadeIn {
+    /* Logo initial appearance -- fades in and floats up */
+    @keyframes logoAppear {
+      0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        filter: drop-shadow(0 0 0px rgba(200, 60, 50, 0));
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 30px rgba(200, 60, 50, 0.2));
+      }
+    }
+
+    /* Logo breathing -- subtle opacity and glow pulse */
+    @keyframes logoBreathe {
+      0%, 100% {
+        opacity: 0.85;
+        filter: drop-shadow(0 0 20px rgba(200, 60, 50, 0.1));
+      }
+      50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 50px rgba(200, 60, 50, 0.3));
+      }
+    }
+
+    /* Staggered text fade-in */
+    @keyframes fadeInUp {
       0% {
         opacity: 0;
         transform: translateY(20px);
@@ -157,6 +205,7 @@
 </head>
 <body>
   <div class="container">
+    <img src="logo.png" alt="REKALL brain logo" class="logo">
     <h1 class="title">Rekall</h1>
     <p class="tagline">"Get your brain to Mars"</p>
     <div class="divider"></div>
